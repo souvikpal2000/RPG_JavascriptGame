@@ -21,10 +21,12 @@ let GameManager = {
         }
         let getInterface = document.querySelector(".interface");
         getInterface.innerHTML = '<img src="images/player-avatar/' + 
-        classType.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + 
+        classType.toLowerCase() + '.jpg" class="img-avatar"><div class="player"><h3>' + 
         classType + '</h3><p class="health-player">Health: ' + player.health + '</p><p>Mana: ' + player.mana + 
         '</p><p>Strength: ' + player.strength + '</p><p>Agility: ' + player.agility + 
         '</p><p>Speed: ' + player.speed + '</p></div>';
+        getInterface.style.flexDirection = "row";
+        document.querySelector(".player").style.height = "160px";
     },
     setPreFight: function(){
         let getHeader = document.querySelector(".header");
