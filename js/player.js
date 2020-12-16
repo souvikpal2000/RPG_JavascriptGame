@@ -118,7 +118,14 @@ let PlayerMoves = {
 		}
 		else
 		{
-			alert("Refresh the browser to play again");
+			if(player.health <= 0)
+			{
+				alert("You Lost! Refresh the browser to play again");
+			}
+			else if(enemy.health <= 0)
+			{
+				alert("You Won! Refresh the browser to play again");
+			}
 		}
 	}
 }
